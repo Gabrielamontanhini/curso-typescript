@@ -1,5 +1,28 @@
-const numbers: (number)[] = [1,2,3,4,5];
-const anwsers:(boolean)[] = [true, false, false, true, false];
-const strings:(string)[] = ["one", "two", "three", "four", "five"];
-const mix:(number|string)[] = [1,"two",3,"four",5];
-const floatNumbers:(number)[] = [1.0,2.5,3.0,4.1,5.5];
+function multiply1(num1: number, num2: number): number {
+    return num1 * num2;
+}
+
+function sum1(num1: number, num2: number): number {
+    return num1 + num2;
+}
+
+function isEven1 (num: number): boolean {
+    return num % 2 === 0;
+}
+
+function showResult1(result: number):void {
+    if(isEven(result)) {
+        console.log(`The result is ${result} and it's even!`);
+    } else {
+        console.log(`The result is ${result} and it's odd!`);
+    }
+}
+
+(() => {
+    const num1 = prompt("First Number");
+    const num2 = prompt("Second Number");
+    
+    let result:number = sum1(num1,num2);
+    result += multiply(1,2);
+    showResult(result);
+})();
